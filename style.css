@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6E0B14;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    width: 100%;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #F0D7D9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-text h2 {
+    font-size: 20px;
+    color: #6E0B14;
+    margin-bottom: 2px;
+}
+
+.brand-text p {
+    font-size: 12px;
+    color: #68727D;
+    max-width: 500px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #6E0B14;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    color: #B5121B;
+}
+
+.hero {
+    min-height: calc(100vh - 85px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    align-items: center;
+    gap: 50px;
+    padding: 60px 7%;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #FFF7F7 55%,
+        #FCE8E9 100%
+    );
+}
+
+.hero-content {
+    max-width: 750px;
+    min-width: 0;
+}
+
+.label {
+    display: inline-block;
+    padding: 7px 16px;
+    margin-bottom: 18px;
+    border-radius: 30px;
+    background: #FCE8E9;
+    color: #B5121B;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    color: #6E0B14;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 650px;
+    color: #68727D;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.accomplishments-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 90px 7%;
+}
+
+.accomplishments {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.achievement-card {
+    min-width: 0;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #F0D7D9;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(110, 11, 20, 0.07);
+}
+
+.achievement-card h3 {
+    font-size: 25px;
+    line-height: 1.25;
+    color: #B5121B;
+    margin-bottom: 10px;
+}
+
+.achievement-card h4 {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6E0B14;
+    margin-bottom: 14px;
+}
+
+.achievement-card p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #68727D;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 220px;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn.primary {
+    color: #ffffff;
+    background: #B5121B;
+}
+
+.btn.primary:hover {
+    background: #6E0B14;
+}
+
+.btn.secondary {
+    color: #6E0B14;
+    background: #ffffff;
+    border: 2px solid #6E0B14;
+}
+
+.btn.secondary:hover {
+    color: #ffffff;
+    background: #6E0B14;
+}
+
+.portrait-container {
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.portrait {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    max-height: 750px;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.section {
+    padding: 100px 7%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 38px;
+    color: #6E0B14;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 800px;
+    color: #68727D;
+}
+
+.contact {
+    background: #FFF7F7;
+    max-width: none;
+    padding: 100px 7%;
+    margin-top: 40px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin-top: 45px;
+}
+
+.contact-item {
+    min-width: 0;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #F0D7D9;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(110, 11, 20, 0.06);
+}
+
+.contact-item h4 {
+    color: #B5121B;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #68727D;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #4A070D;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+    .site-header {
+        padding: 12px 3%;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+        gap: 35px;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    }
+
+    .portrait {
+        width: min(100%, 430px);
+    }
+
+    .accomplishments-section {
+        padding: 70px 5%;
+    }
+
+    .accomplishments {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .achievement-card {
+        padding: 24px;
+    }
+
+    .achievement-card h3 {
+        font-size: 22px;
+    }
+
+    .achievement-card p {
+        font-size: 13px;
+    }
+
+    .contact {
+        padding: 85px 5%;
+    }
+
+    .contact-details {
+        gap: 22px;
+    }
+
+    .contact-item {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .site-header {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navigation {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+        gap: 20px;
+    }
+
+    .portrait-container {
+        grid-column: 1;
+        grid-row: 1;
+        min-height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .portrait {
+        width: min(90%, 420px);
+        max-height: none;
+    }
+
+    .accomplishments-section {
+        padding: 60px 6%;
+    }
+
+    .accomplishments {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-bottom: 45px;
+    }
+
+    .achievement-card {
+        padding: 25px;
+    }
+
+    .achievement-card h3 {
+        font-size: 25px;
+    }
+
+    .achievement-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact {
+        padding: 70px 6%;
+        margin-top: 20px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-text h2 {
+        font-size: 16px;
+    }
+
+    .brand-text p {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .portrait {
+        width: 95%;
+    }
+
+    .accomplishments-section {
+        padding: 50px 5%;
+    }
+
+    .accomplishments {
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+
+    .achievement-card {
+        padding: 22px;
+    }
+
+    .achievement-card h3 {
+        font-size: 23px;
+    }
+
+    .achievement-card h4 {
+        font-size: 14px;
+    }
+
+    .achievement-card p {
+        font-size: 13px;
+    }
+
+    .btn {
+        max-width: none;
+    }
+
+    .contact {
+        padding: 60px 5%;
+    }
+
+    .contact-details {
+        gap: 18px;
+    }
+
+    .contact-item {
+        padding: 22px;
+    }
+}
